@@ -96,11 +96,11 @@ def getCode(path, info, _cookie, name):
 	pattern = re.compile('Courier New,Courier,monospace">(.+?)</pre>',re.S)
 	ans = pattern.findall(txt)[0]
 	
-	filepath = path + '%s%s.%s' %(info[2],info[3],info[7].lower())
+	filepath = path + '/%s%s.%s' %(info[2],info[3],info[7].lower())
 	if(os.path.isfile(filepath)):
 		print(info[2]+info[3]+" already exists, skip")
 		return 0
-	print ('Saving '+info[2]+info[3]+'.'+info[7].lower()+' to'+str(filepath))
+	print ('Saving '+info[2]+info[3]+'.'+info[7].lower()+' to '+str(filepath))
 	f = open(filepath, 'w')
 	f.write("// Wrote by "+name+" on "+str(datetime.fromtimestamp(info[9]/1000))+"\n// Exe.Time "+str(info[5])+"ms Exe.Memory "+str(info[6])+"K\n")
 	f.write(ans)
