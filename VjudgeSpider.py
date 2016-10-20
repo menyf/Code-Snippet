@@ -36,8 +36,7 @@ def Login(VjudgeID, VjudgePWD):
 	req.add_header('User-Agent','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Safari/602.1.50')
 	
 	res = request.urlopen(req)	
-	return res.getheaders()[5][1][0:43]
-	if "success" in res.read().decode('utf-8'):
+	if "success" == res.read().decode('utf-8'):
 		print("Login successfully")
 		return res.getheaders()[5][1][0:43] 
 	else:
