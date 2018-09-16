@@ -20,7 +20,7 @@ public:
 
 		if (l1->val > l2->val) {
 			now = l2;
-			l2 = l2->next;
+			l2 = l2->next; 
 		}
 		else {
 			now = l1;
