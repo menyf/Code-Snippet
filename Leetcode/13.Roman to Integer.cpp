@@ -20,6 +20,7 @@ public:
 			int tmp = mp[s[i]];
 			if (tmp < mx) {
 				ans -= tmp;
+				
 			}
 			else {
 				mx = tmp;
@@ -31,9 +32,9 @@ public:
 };
 int main() {
 	Solution* s = new Solution();
-	cout << s->romanToInt("III") << endl;
-	cout << s->romanToInt("IV") << endl;
-	cout << s->romanToInt("IX") << endl;
+//	cout << s->romanToInt("III") << endl;
+//	cout << s->romanToInt("IV") << endl;
+//	cout << s->romanToInt("IX") << endl;
 	cout << s->romanToInt("LVIII") << endl;
 	cout << s->romanToInt("MCMXCIV") << endl;
 }
